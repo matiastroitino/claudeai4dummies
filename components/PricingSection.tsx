@@ -10,7 +10,7 @@ export default function PricingSection() {
   }[];
 
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden" id="module-06">
+    <section className="relative py-10 md:py-16 overflow-hidden" id="module-06">
       {/* bg glow */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] pointer-events-none"
@@ -25,10 +25,10 @@ export default function PricingSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          {plans.map((plan) => (
+          {plans.map((plan, i) => (
             <div
               key={plan.name}
-              className={`relative glass-card p-8 flex flex-col gap-6 ${
+              className={`relative glass-card p-8 flex flex-col gap-6 animate-enter stagger-${(i % 3) + 1} ${
                 plan.highlighted
                   ? "border-coral/40 shadow-[0_0_40px_rgba(255,107,53,0.15)]"
                   : ""

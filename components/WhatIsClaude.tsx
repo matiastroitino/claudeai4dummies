@@ -9,7 +9,7 @@ export default function WhatIsClaude() {
   const pillars = t.raw("pillars") as { icon: string; title: string; desc: string }[];
 
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden" id="what-is-claude">
+    <section className="relative py-10 md:py-16 overflow-hidden" id="what-is-claude">
       {/* Background accent */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] pointer-events-none"
@@ -43,8 +43,12 @@ export default function WhatIsClaude() {
             return (
               <div
                 key={pillar.title}
-                className="glass-card p-8 flex flex-col gap-5 group"
-                style={{ borderColor: c.border }}
+                className={`glass-card p-8 flex flex-col gap-5 group animate-enter stagger-${(i % 3) + 1}`}
+                style={{ 
+                  borderColor: c.border,
+                  "--card-glow": c.glow,
+                  "--card-border-hover": c.border 
+                } as React.CSSProperties}
               >
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center"

@@ -63,7 +63,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative min-h-screen pt-32 pb-16 flex flex-col items-center justify-center text-center overflow-hidden grid-bg"
+      className="relative min-h-screen pt-28 pb-10 flex flex-col items-center justify-center text-center overflow-hidden grid-bg"
       id="hero"
       aria-label="Hero section"
     >
@@ -89,7 +89,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 px-6 max-w-5xl mx-auto">
         {/* Badge */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-8 animate-enter stagger-1">
           <span className="badge" id="hero-badge">
             <Sparkles size={12} />
             {t("badge")}
@@ -97,21 +97,21 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="display text-white mb-6" id="hero-headline">
+        <h1 className="display text-white mb-6 animate-enter stagger-2" id="hero-headline">
           <span className="block">{t("headline1")}</span>
           <span className="block gradient-text">{t("headline2")}</span>
         </h1>
 
         {/* Sub */}
         <p
-          className="text-white/55 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-white/55 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed animate-enter stagger-3"
           id="hero-sub"
         >
           {t("sub")}
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20 animate-enter stagger-4">
           <Link
             href={`/${locale}/modulo/01`}
             className="btn-glow text-base px-8 py-4 inline-block no-underline"

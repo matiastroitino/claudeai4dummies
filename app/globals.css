@@ -29,7 +29,11 @@
   --font-mono: "JetBrains Mono", monospace;
 
   /* Spacing rhythm */
-  --section-gap: clamp(5rem, 12vw, 9rem);
+  --section-gap: clamp(3rem, 6vw, 4rem);
+
+  /* Emil's Easings */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 /* ── Base ────────────────────────────────────────────────────── */
@@ -150,17 +154,25 @@ body::before {
 
 /* ── Glass Card ─────────────────────────────────────────────── */
 .glass-card {
+  --card-glow: var(--coral-glow);
+  --card-border-hover: var(--border-hover);
   background: rgba(15, 15, 26, 0.6);
   border: 1px solid var(--border);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-radius: 1.25rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 200ms var(--ease-out), box-shadow 200ms var(--ease-out), transform 160ms var(--ease-out);
 }
 
-.glass-card:hover {
-  border-color: var(--border-hover);
-  box-shadow: 0 0 40px var(--coral-glow);
+@media (hover: hover) and (pointer: fine) {
+  .glass-card:hover {
+    border-color: var(--card-border-hover);
+    box-shadow: 0 0 40px var(--card-glow);
+  }
+}
+
+.glass-card:active {
+  transform: scale(0.98);
 }
 
 /* ── Glow Button ─────────────────────────────────────────────── */
@@ -175,16 +187,18 @@ body::before {
   cursor: pointer;
   border-radius: 0.75rem;
   padding: 0.85rem 2rem;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out);
 }
 
-.btn-glow:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 32px var(--coral-glow), 0 4px 20px rgba(0,0,0,0.4);
+@media (hover: hover) and (pointer: fine) {
+  .btn-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 32px var(--coral-glow), 0 4px 20px rgba(0,0,0,0.4);
+  }
 }
 
 .btn-glow:active {
-  transform: translateY(0);
+  transform: scale(0.97);
 }
 
 .btn-outline {
@@ -196,13 +210,19 @@ body::before {
   cursor: pointer;
   border-radius: 0.75rem;
   padding: 0.85rem 2rem;
-  transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
+  transition: border-color 160ms var(--ease-out), color 160ms var(--ease-out), box-shadow 160ms var(--ease-out), transform 160ms var(--ease-out);
 }
 
-.btn-outline:hover {
-  border-color: var(--coral);
-  color: var(--coral);
-  box-shadow: 0 0 16px var(--coral-dim);
+@media (hover: hover) and (pointer: fine) {
+  .btn-outline:hover {
+    border-color: var(--coral);
+    color: var(--coral);
+    box-shadow: 0 0 16px var(--coral-dim);
+  }
+}
+
+.btn-outline:active {
+  transform: scale(0.97);
 }
 
 /* ── Badge ───────────────────────────────────────────────────── */
@@ -298,6 +318,18 @@ body::before {
 .stagger-5 { animation-delay: 0.5s; }
 .stagger-6 { animation-delay: 0.6s; }
 .stagger-7 { animation-delay: 0.7s; }
+
+/* ── Enter Animation (@starting-style) ───────────────────────── */
+.animate-enter {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+  transition: opacity 400ms var(--ease-out), transform 400ms var(--ease-out) !important;
+
+  @starting-style {
+    opacity: 0 !important;
+    transform: translateY(16px) scale(0.95) !important;
+  }
+}
 
 /* ── Highlight span in brand ─────────────────────────────────── */
 .brand span {

@@ -23,7 +23,7 @@ export default function ModuleGrid() {
   }[];
 
   return (
-    <section className="relative py-16 md:py-24" id="modules">
+    <section className="relative py-10 md:py-16" id="modules">
       <div className="section">
         {/* Header */}
         <div className="text-center mb-16">
@@ -34,12 +34,12 @@ export default function ModuleGrid() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {items.map((item) => (
+          {items.map((item, i) => (
             <Link
               key={item.number}
               href={`/${locale}/modulo/${item.number}`}
               id={`module-${item.number}`}
-              className="glass-card p-6 flex flex-col gap-4 group no-underline cursor-pointer relative overflow-hidden"
+              className={`glass-card p-6 flex flex-col gap-4 group no-underline cursor-pointer relative overflow-hidden animate-enter stagger-${(i % 7) + 1}`}
             >
               {/* Number watermark */}
               <span

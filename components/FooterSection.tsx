@@ -40,6 +40,13 @@ export default function FooterSection() {
           ))}
         </div>
 
+        {/* Legal Links */}
+        <div className="flex flex-wrap justify-center gap-6 mb-10">
+          <Link href={`/${locale}/legal/aviso-legal`} className="text-xs text-white/30 hover:text-white/70 transition-colors no-underline">Aviso Legal</Link>
+          <Link href={`/${locale}/legal/privacidad`} className="text-xs text-white/30 hover:text-white/70 transition-colors no-underline">Política de Privacidad</Link>
+          <Link href={`/${locale}/legal/cookies`} className="text-xs text-white/30 hover:text-white/70 transition-colors no-underline">Política de Cookies</Link>
+        </div>
+
         {/* All modules */}
         <div className="flex flex-wrap justify-center gap-4">
           {["01", "02", "03", "04", "05", "06", "07"].map((n) => (

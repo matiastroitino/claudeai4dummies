@@ -77,7 +77,7 @@ export default function Nav() {
               <button
                 key={link.id}
                 onClick={() => scrollTo(link.id)}
-                className="text-sm text-white/50 hover:text-white px-3 py-2 rounded-lg hover:bg-white/5 transition-all duration-200"
+                className="text-sm font-semibold text-white hover:opacity-80 px-3 py-2 rounded-lg hover:bg-white/5 transition-all duration-200"
               >
                 {link.label}
               </button>
@@ -119,7 +119,7 @@ export default function Nav() {
               <button
                 key={link.id}
                 onClick={() => scrollTo(link.id)}
-                className="text-left text-sm text-white/60 hover:text-white py-2 px-3 rounded-lg hover:bg-white/5 transition-all"
+                className="text-left text-sm font-semibold text-white hover:opacity-80 py-2 px-3 rounded-lg hover:bg-white/5 transition-all"
               >
                 {link.label}
               </button>

@@ -20,7 +20,7 @@ export default function EcosystemTabs() {
   const accentBorders = ["rgba(255,107,53,0.3)", "rgba(0,212,170,0.3)", "rgba(255,190,11,0.3)"];
 
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden" id="ecosystem">
+    <section className="relative py-10 md:py-16 overflow-hidden" id="ecosystem">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: "linear-gradient(180deg, transparent 0%, rgba(255,107,53,0.03) 50%, transparent 100%)" }}
@@ -63,8 +63,12 @@ export default function EcosystemTabs() {
         {/* Content panel */}
         <div
           key={tab.id}
-          className="glass-card p-8 md:p-12 grid md:grid-cols-2 gap-12 items-start"
-          style={{ borderColor: accentBorders[active] }}
+          className="glass-card p-8 md:p-12 grid md:grid-cols-2 gap-12 items-start animate-enter"
+          style={{ 
+            borderColor: accentBorders[active],
+            "--card-glow": accentDims[active],
+            "--card-border-hover": accentBorders[active]
+          } as React.CSSProperties}
         >
           {/* Left: description */}
           <div>
