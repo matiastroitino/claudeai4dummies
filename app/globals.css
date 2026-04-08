@@ -1,26 +1,305 @@
 @import "tailwindcss";
+@import "@fontsource-variable/bricolage-grotesque";
+@import "@fontsource-variable/dm-sans";
+@import "@fontsource/jetbrains-mono";
 
+/* ── Design System Tokens ───────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colors */
+  --void: #08080e;
+  --surface: #0f0f1a;
+  --surface-2: #161626;
+  --border: rgba(255, 255, 255, 0.07);
+  --border-hover: rgba(255, 255, 255, 0.14);
+
+  /* Accents */
+  --coral: #ff6b35;
+  --coral-dim: rgba(255, 107, 53, 0.15);
+  --coral-glow: rgba(255, 107, 53, 0.35);
+  --amber: #ffbe0b;
+  --amber-dim: rgba(255, 190, 11, 0.12);
+  --teal: #00d4aa;
+  --teal-dim: rgba(0, 212, 170, 0.12);
+  --violet: #7c5cbf;
+  --violet-dim: rgba(124, 92, 191, 0.12);
+
+  /* Typography */
+  --font-display: "Bricolage Grotesque Variable", system-ui, sans-serif;
+  --font-body: "DM Sans Variable", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Spacing rhythm */
+  --section-gap: clamp(5rem, 12vw, 9rem);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ── Base ────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--void);
+  color: rgba(255, 255, 255, 0.87);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Tailwind Theme Extensions ──────────────────────────────── */
+@theme {
+  --color-void: #08080e;
+  --color-surface: #0f0f1a;
+  --color-surface-2: #161626;
+  --color-coral: #ff6b35;
+  --color-amber: #ffbe0b;
+  --color-teal: #00d4aa;
+  --color-violet: #7c5cbf;
+  --font-family-display: "Bricolage Grotesque Variable", system-ui, sans-serif;
+  --font-family-sans: "DM Sans Variable", system-ui, sans-serif;
+  --font-family-mono: "JetBrains Mono", monospace;
+}
+
+.text-coral { color: var(--coral) !important; }
+.text-teal  { color: var(--teal)  !important; }
+.text-amber { color: var(--amber) !important; }
+.bg-coral   { background-color: var(--coral) !important; }
+
+
+/* ── Typography Scale ─────────────────────────────────────────── */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.display {
+  font-size: clamp(2.6rem, 6vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.headline-l {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.headline-m {
+  font-size: clamp(1.4rem, 2.5vw, 2.25rem);
+  font-weight: 600;
+}
+
+.label-upper {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ── Shimmer Gradient ─────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #ff6b35 0%, #ffbe0b 50%, #ff6b35 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ── Noise Grain Overlay ──────────────────────────────────────── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ── Grid Lines ──────────────────────────────────────────────── */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 107, 53, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 107, 53, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ── Glass Card ─────────────────────────────────────────────── */
+.glass-card {
+  background: rgba(15, 15, 26, 0.6);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 1.25rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 0 40px var(--coral-glow);
+}
+
+/* ── Glow Button ─────────────────────────────────────────────── */
+.btn-glow {
+  position: relative;
+  background: linear-gradient(135deg, var(--coral), #ff8c5a);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  padding: 0.85rem 2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 32px var(--coral-glow), 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.btn-glow:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-display);
+  font-weight: 500;
+  border: 1px solid var(--border-hover);
+  cursor: pointer;
+  border-radius: 0.75rem;
+  padding: 0.85rem 2rem;
+  transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: var(--coral);
+  color: var(--coral);
+  box-shadow: 0 0 16px var(--coral-dim);
+}
+
+/* ── Badge ───────────────────────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: 100px;
+  background: var(--coral-dim);
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  color: var(--coral);
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--void); }
+::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 107, 53, 0.4); }
+
+/* ── Selection ──────────────────────────────────────────────── */
+::selection {
+  background: var(--coral-dim);
+  color: var(--coral);
+}
+
+/* ── Animated Orb Background ────────────────────────────────── */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) scale(1); opacity: 0.4; }
+  50% { transform: translateY(-30px) scale(1.05); opacity: 0.6; }
+}
+
+/* ── Section ─────────────────────────────────────────────────── */
+.section {
+  padding: var(--section-gap) clamp(1.5rem, 4vw, 3rem);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ── Code Block ─────────────────────────────────────────────── */
+.code-block {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  overflow-x: auto;
+  line-height: 1.7;
+}
+
+/* ── Progress Bar (Scroll) ──────────────────────────────────── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--coral), var(--amber));
+  z-index: 100;
+  transition: width 0.1s linear;
+}
+
+/* ── Tab Active State ────────────────────────────────────────── */
+.tab-active {
+  background: var(--coral-dim);
+  border-color: rgba(255, 107, 53, 0.4) !important;
+  color: white !important;
+}
+
+/* ── Module Card Level Colors ────────────────────────────────── */
+.level-basic { color: var(--teal); background: var(--teal-dim); }
+.level-intermediate { color: var(--amber); background: var(--amber-dim); }
+.level-advanced { color: var(--coral); background: var(--coral-dim); }
+.level-all { color: var(--violet); background: var(--violet-dim); }
+
+/* ── Stagger Animation Utilities ─────────────────────────────── */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+.stagger-7 { animation-delay: 0.7s; }
+
+/* ── Highlight span in brand ─────────────────────────────────── */
+.brand span {
+  color: var(--coral);
 }

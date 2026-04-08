@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "title": "Claude para Dummies — La guía definitiva del ecosistema Anthropic",
+    "description": "Aprende a usar Claude, Claude Code y Cowork sin conocimientos técnicos. La guía más completa en español sobre el ecosistema Anthropic."
+  },
+  "nav": {
+    "brand": "Claude4Dummies",
+    "cta": "Empezar ahora",
+    "temario": "Temario",
+    "lang": "EN"
+  },
+  "hero": {
+    "badge": "La IA más poderosa del mundo",
+    "headline1": "La IA que está cambiando todo,",
+    "headline2": "explicada para humanos normales.",
+    "sub": "Una guía práctica y sin humo sobre Claude, Claude Code y Cowork. Cero código. Cero frustración. Sólo resultados.",
+    "cta_primary": "Comenzar la guía",
+    "cta_secondary": "Ver el temario",
+    "scroll": "Desplázate para empezar"
+  },
+  "what": {
+    "badge": "¿Qué es Claude?",
+    "headline": "Imagina que tienes un colaborador brillante...",
+    "sub": "Que nunca duerme, nunca se cansa, sabe de casi todo y trabaja a la velocidad del pensamiento. Eso es Claude: la inteligencia artificial más avanzada del mundo, hecha accesible para todos.",
+    "pillars": [
+      {
+        "icon": "Brain",
+        "title": "Razona y aprende",
+        "desc": "No es un buscador ni una calculadora. Claude razona, deduce, crea y puede mantener conversaciones de horas con plena coherencia."
+      },
+      {
+        "icon": "Link2",
+        "title": "Se conecta con todo",
+        "desc": "Gmail, Notion, Calendar, Slack, tu terminal, tus archivos locales… Claude se integra con las herramientas que ya usas."
+      },
+      {
+        "icon": "Shield",
+        "title": "Diseñado con seguridad",
+        "desc": "Anthropic pone la seguridad primero. Claude tiene principios éticos incorporados y protocolos de privacidad sólidos."
+      }
+    ]
+  },
+  "ecosystem": {
+    "badge": "El ecosistema Claude",
+    "headline": "Tres modos. Un ecosistema.",
+    "sub": "Claude no es solo un chatbot. Es una plataforma con tres herramientas distintas para distintas necesidades.",
+    "tabs": [
+      {
+        "id": "chat",
+        "label": "Claude Chat",
+        "emoji": "💬",
+        "tagline": "Tu asistente inteligente de siempre",
+        "analogy": "Como WhatsApp con un genio al otro lado.",
+        "description": "El modo más accesible. Conversas, preguntas, creas documentos, analizas datos. Disponible en web, móvil y extensión de Chrome. No necesitas instalar nada.",
+        "ideal": ["Todos", "Principiantes", "Profesionales", "Estudiantes"],
+        "features": [
+          "Conversaciones largas con memoria",
+          "Artifacts (documentos vivos dentro del chat)",
+          "Conectores: Gmail, Notion, Slack, Calendar...",
+          "Skills especializados",
+          "Generación de imágenes"
+        ],
+        "ctaLabel": "Ver Módulo Chat →"
+      },
+      {
+        "id": "cowork",
+        "label": "Claude Cowork",
+        "emoji": "🏢",
+        "tagline": "Tu empleado de oficina IA en tu escritorio",
+        "analogy": "Como contratar a un asistente personal que trabaja en tu propio ordenador.",
+        "description": "Cowork tiene acceso a tus carpetas y archivos locales. Le das una tarea compleja (organiza estas 500 facturas, analiza estos contratos) y la ejecuta de forma autónoma mientras tú haces otra cosa.",
+        "ideal": ["Equipos no técnicos", "Abogados", "Analistas", "Finanzas", "Marketing"],
+        "features": [
+          "Acceso a carpetas y archivos locales",
+          "Tareas autónomas de larga duración",
+          "Dispatch: control desde el móvil",
+          "Tareas programadas (tipo cron)",
+          "Integración con Office/Google Workspace"
+        ],
+        "ctaLabel": "Ver Módulo Cowork →"
+      },
+      {
+        "id": "code",
+        "label": "Claude Code",
+        "emoji": "⚡",
+        "tagline": "El programador que trabaja para ti",
+        "analogy": "Como tener un senior developer disponible 24/7 que ejecuta, prueba y despliega código por ti.",
+        "description": "Claude Code corre en tu terminal o en VS Code/Antigravity. Escribe y ejecuta código real, crea páginas web, conecta APIs, automatiza procesos. No necesitas saber programar: solo decirle qué quieres lograr.",
+        "ideal": ["Emprendedores", "Freelancers", "Desarrolladores", "Agencias"],
+        "features": [
+          "Ejecuta código real en tu sistema",
+          "Crea y despliega webs completas",
+          "Sistema loop iterativo (agente real)",
+          "Skills personalizables (SOPs)",
+          "Conexión MCP con cualquier app"
+        ],
+        "ctaLabel": "Ver Módulo Code →"
+      }
+    ]
+  },
+  "modules": {
+    "badge": "La guía completa",
+    "headline": "7 módulos. De cero a experto.",
+    "sub": "Sigue el orden o salta directamente a lo que necesitas. Cada módulo es independiente y auto-suficiente.",
+    "items": [
+      {
+        "number": "01",
+        "emoji": "🧠",
+        "title": "Los Fundamentos",
+        "desc": "Anthropic, modelos (Haiku/Sonnet/Opus), tokens y planes de precio explicados con analogías.",
+        "time": "10 min",
+        "level": "Básico"
+      },
+      {
+        "number": "02",
+        "emoji": "💬",
+        "title": "Claude Chat",
+        "desc": "Prompts efectivos, conectores, Artifacts y Skills del chat. Para todo el mundo.",
+        "time": "15 min",
+        "level": "Básico"
+      },
+      {
+        "number": "03",
+        "emoji": "🏢",
+        "title": "Claude Cowork",
+        "desc": "Automatiza tareas de oficina. Archivos, informes y flujos de trabajo sin código.",
+        "time": "20 min",
+        "level": "Intermedio"
+      },
+      {
+        "number": "04",
+        "emoji": "⚡",
+        "title": "Claude Code",
+        "desc": "El agente de código más potente. Configura, crea proyectos y despliega en la nube.",
+        "time": "30 min",
+        "level": "Intermedio"
+      },
+      {
+        "number": "05",
+        "emoji": "🦾",
+        "title": "Skills & MCP",
+        "desc": "El protocolo que conecta Claude con el resto del mundo. Superpoderes sin límite.",
+        "time": "25 min",
+        "level": "Avanzado"
+      },
+      {
+        "number": "06",
+        "emoji": "💰",
+        "title": "Planes y Precios",
+        "desc": "Compara Free, Pro y Max. Calcula tu ROI y decide qué plan es ideal para ti.",
+        "time": "10 min",
+        "level": "Básico"
+      },
+      {
+        "number": "07",
+        "emoji": "🏆",
+        "title": "Casos de Uso Reales",
+        "desc": "Freelancers, empresas, marketing, educación. Inspiración práctica para empezar hoy.",
+        "time": "15 min",
+        "level": "Todos"
+      }
+    ]
+  },
+  "pricing": {
+    "badge": "Planes y precios",
+    "headline": "¿Cuánto cuesta Claude?",
+    "sub": "Desde gratis hasta profesional. Elige según tu uso real.",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "period": "/mes",
+        "desc": "Para explorar y empezar",
+        "features": [
+          "Claude Sonnet limitado",
+          "Claude Chat web",
+          "Sin Claude Code",
+          "Sin Cowork avanzado"
+        ],
+        "cta": "Empezar gratis",
+        "highlighted": false
+      },
+      {
+        "name": "Pro",
+        "price": "$20",
+        "period": "/mes",
+        "desc": "El más popular para individuos",
+        "features": [
+          "5× más uso que Free",
+          "Claude Code incluido",
+          "Cowork completo",
+          "Acceso a todos los modelos",
+          "Skills y conectores"
+        ],
+        "cta": "Elegir Pro",
+        "highlighted": true
+      },
+      {
+        "name": "Max",
+        "price": "$100",
+        "period": "/mes",
+        "desc": "Para usuarios intensivos y equipos",
+        "features": [
+          "20× más uso que Pro",
+          "Prioridad en horas pico",
+          "Ideal para agentes multi-tarea",
+          "Acceso anticipado a nuevas features",
+          "Soporte prioritario"
+        ],
+        "cta": "Elegir Max",
+        "highlighted": false
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Creado con Claude Code 🤖",
+    "sub": "Basado en documentación oficial de Anthropic · 2026",
+    "links": [
+      { "label": "Claude oficial", "href": "https://claude.ai" },
+      { "label": "Anthropic", "href": "https://anthropic.com" },
+      { "label": "Claude Code docs", "href": "https://docs.claude.ai/code" }
+    ]
+  }
+}
