@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export default function CookieConsent() {
   const [consentGiven, setConsentGiven] = useState<boolean | null>(null);
@@ -42,8 +42,8 @@ export default function CookieConsent() {
 
   return (
     <>
-      {/* Carga del GTM Condicional (Incluye Analytics si lo configuras vía Tags de GTM) */}
-      {consentGiven && <GoogleTagManager gtmId="GTM-MS2JBQQR" />}
+      {/* Carga del GA4 Condicional */}
+      {consentGiven && <GoogleAnalytics gaId="G-W2YBH4R95W" />}
 
       {/* Popup de Cookies con animación y estilo Emil Design */}
       {showPopup && (
@@ -65,7 +65,7 @@ export default function CookieConsent() {
                 <span>🍪</span> Preferencias de Privacidad
               </h3>
               <p className="text-sm text-gray-400 leading-relaxed max-w-2xl">
-                Utilizamos cookies de analítica (vía Google Tag Manager) exclusivamente para medir
+                Utilizamos cookies de Google Analytics exclusivamente para medir
                 el uso del sitio y mejorar el contenido. No vendemos tus datos. Según la normativa legal, 
                 necesitamos tu consentimiento explícito antes de activarlos.
               </p>
