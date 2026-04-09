@@ -10,7 +10,7 @@
     "lang": "EN"
   },
   "hero": {
-    "badge": "La IA más poderosa del mundo",
+    "badge": "Una de las IAs más avanzadas del mundo",
     "headline1": "La IA que está cambiando todo,",
     "headline2": "explicada para humanos normales.",
     "sub": "Una guía práctica y sin humo sobre Claude, Claude Code y Cowork. Cero código. Cero frustración. Sólo resultados.",
@@ -172,7 +172,7 @@
         "period": "/mes",
         "desc": "Para explorar y empezar",
         "features": [
-          "Claude Sonnet limitado",
+          "Claude Sonnet 4.6 (uso limitado)",
           "Claude Chat web",
           "Sin Claude Code",
           "Sin Cowork avanzado"
@@ -196,12 +196,27 @@
         "highlighted": true
       },
       {
-        "name": "Max",
-        "price": "$100",
-        "period": "/mes",
-        "desc": "Para usuarios intensivos y equipos",
+        "name": "Team",
+        "price": "desde $25",
+        "period": "/usuario/mes",
+        "desc": "Para equipos (mínimo 5 usuarios)",
         "features": [
-          "20× más uso que Pro",
+          "Todo lo incluido en Pro",
+          "Límites de uso más altos",
+          "Facturación centralizada",
+          "Controles administrativos",
+          "Compartir chats y proyectos"
+        ],
+        "cta": "Elegir Team",
+        "highlighted": false
+      },
+      {
+        "name": "Max",
+        "price": "desde $100",
+        "period": "/mes",
+        "desc": "Para power users (planes 5x y 20x)",
+        "features": [
+          "Hasta 20× más uso que Pro",
           "Prioridad en horas pico",
           "Ideal para agentes multi-tarea",
           "Acceso anticipado a nuevas features",
@@ -218,7 +233,7 @@
     "links": [
       { "label": "Claude oficial", "href": "https://claude.ai" },
       { "label": "Anthropic", "href": "https://anthropic.com" },
-      { "label": "Claude Code docs", "href": "https://docs.claude.ai/code" }
+      { "label": "Claude Code docs", "href": "https://docs.anthropic.com/es/docs/claude-code" }
     ]
   }
 }

@@ -39,7 +39,7 @@ export const modulesEs: ModuleData[] = [
         type: "analogy",
         emoji: "🏭",
         title: "¿Qué es Anthropic?",
-        text: "Piensa en Anthropic como el fabricante. Son la empresa que construyó a Claude, su inteligencia artificial. Igual que Apple hace el iPhone, Anthropic hace Claude. Fundada en 2021 por ex-empleados de OpenAI, su misión es construir IA que sea segura y beneficiosa para la humanidad.",
+        text: "Piensa en Anthropic como el fabricante. Son la empresa que construyó a Claude, su inteligencia artificial. Igual que Apple hace el iPhone, Anthropic hace Claude. Fundada en 2021 por Dario Amodei y Daniela Amodei (junto a otros ex-empleados de OpenAI), su misión es construir IA que sea segura y beneficiosa para la humanidad.",
       },
       {
         type: "p",
@@ -56,12 +56,18 @@ export const modulesEs: ModuleData[] = [
         text: "Imagina que necesitas ir de Madrid a Barcelona. Haiku es el patinete eléctrico: rápido para distancias cortas, barato y eficiente. Sonnet es el coche familiar: el equilibrio perfecto entre velocidad, capacidad y coste. Opus es el avión privado: máxima potencia, máximo razonamiento, máximo coste.",
       },
       {
+        type: "callout",
+        variant: "info",
+        title: "Nota sobre versiones",
+        text: "Los modelos actuales son Claude Haiku 4.5, Claude Sonnet 4.6 y Claude Opus 4.6. Los números de versión evolucionan con el tiempo, pero la jerarquía funcional entre ellos se mantiene.",
+      },
+      {
         type: "table",
         headers: ["Modelo", "Velocidad", "Capacidad", "Ideal para"],
         rows: [
-          ["Haiku ⚡", "Muy rápido", "Tareas simples", "Respuestas rápidas, clasificación, resúmenes cortos"],
-          ["Sonnet 🎯", "Rápido", "Equilibrado", "La mayoría de tareas del día a día — el más usado"],
-          ["Opus 🧠", "Más lento", "Razonamiento profundo", "Problemas complejos, análisis técnicos, investigación"],
+          ["Haiku 4.5 ⚡", "Muy rápido", "Tareas simples", "Respuestas rápidas, clasificación, resúmenes cortos"],
+          ["Sonnet 4.6 🎯", "Rápido", "Equilibrado", "La mayoría de tareas del día a día — el más usado"],
+          ["Opus 4.6 🧠", "Más lento", "Razonamiento profundo", "Problemas complejos, análisis técnicos, investigación"],
         ],
       },
       {
@@ -180,7 +186,7 @@ export const modulesEs: ModuleData[] = [
       },
       {
         type: "p",
-        text: "En Settings → Conectores puedes vincular Claude con tus aplicaciones favoritas. Una vez conectado, Claude puede leer y escribir en ellas directamente desde el chat.",
+        text: "En Settings → Integraciones (o Connectors) puedes vincular Claude con tus aplicaciones favoritas. Una vez conectado, Claude puede leer y escribir en ellas directamente desde el chat.",
       },
       {
         type: "table",
@@ -190,7 +196,6 @@ export const modulesEs: ModuleData[] = [
           ["Google Calendar", "Ver eventos, sugerir horarios, crear recordatorios"],
           ["Notion", "Leer páginas, crear contenido, actualizar bases de datos"],
           ["Slack", "Leer mensajes, redactar respuestas, buscar en canales"],
-          ["Canva", "Acceder a diseños, describir cambios"],
           ["GitHub", "Leer repositorios, revisar PRs, buscar código"],
         ],
       },
@@ -206,7 +211,7 @@ export const modulesEs: ModuleData[] = [
       },
       {
         type: "p",
-        text: "Los Skills son instrucciones especializadas preconfiguradas que puedes activar desde claude.com/skills. Funcionan como 'modos experto' instantáneos.",
+        text: "En Claude Chat, los 'Skills' o herramientas especializadas se aplican mediante las Instrucciones personalizadas (en tu Perfil) o creando Proyectos. Funcionan como 'modos experto' donde guardas tus mejores prompts y contexto compartido.",
       },
       {
         type: "quiz",
@@ -246,6 +251,12 @@ export const modulesEs: ModuleData[] = [
         text: "El Chat responde a preguntas. Cowork ejecuta tareas end-to-end. No te dice 'aquí tienes los pasos para organizar tus facturas' — directamente entra en tu carpeta, lee cada archivo y lo organiza. El Chat es consultor. Cowork es un empleado.",
       },
       {
+        type: "callout",
+        variant: "warning",
+        title: "Nota: Funcionalidad Beta",
+        text: "Claude Cowork es actualmente una funcionalidad en Beta. La interfaz exacta, los nombres de los botones y los pasos para conceder acceso a carpetas pueden variar. Consulta siempre la documentación oficial para instrucciones actualizadas.",
+      },
+      {
         type: "h2",
         text: "Cómo darle acceso a tus carpetas",
       },
@@ -280,14 +291,7 @@ export const modulesEs: ModuleData[] = [
           ["Limpieza de archivos", "'Esta carpeta tiene 200 archivos. Elimina duplicados, renombra según formato coherente y archiva lo anterior a 2023'", "Procesa, compara, renombra y reorganiza el archivo completo"],
         ],
       },
-      {
-        type: "h2",
-        text: "Dispatch: controla Cowork desde el móvil",
-      },
-      {
-        type: "p",
-        text: "Dispatch es una actualización reciente que te permite controlar y monitorear las tareas de Cowork desde tu smartphone. Dejas el ordenador trabajando y puedes ver el progreso, añadir instrucciones o aprobar decisiones desde cualquier lugar.",
-      },
+
       {
         type: "h2",
         text: "Tareas programadas: tu asistente que nunca olvida",
@@ -342,7 +346,7 @@ export const modulesEs: ModuleData[] = [
             "Ves los archivos en el sidebar izquierdo",
             "Claude a la derecha en panel dedicado",
             "Ideal para principiantes",
-            "Antigravity = VS Code con extras de Google",
+            "Antigravity = VS Code + IA integrada",
           ],
         },
         right: {
@@ -413,7 +417,7 @@ Next.js 15, Tailwind v4, Supabase, Stripe.
         type: "callout",
         variant: "warning",
         title: "Cuidado con Bypass",
-        text: "El modo Bypass (bypass permissions) permite a Claude ejecutar cualquier acción sin confirmación, incluyendo borrar archivos. Úsalo SOLO en proyectos aislados donde no haya datos importantes que perder. Para habilitarlo: Settings → 'claude code allow dangerously skip permissions'.",
+        text: "El modo Bypass permite a Claude ejecutar cualquier acción sin confirmación, incluyendo borrar archivos. Úsalo SOLO en proyectos aislados donde no haya datos importantes que perder. Para habilitarlo, usa el flag CLI: 'claude --dangerously-skip-permissions'.",
       },
       {
         type: "h2",
@@ -437,7 +441,6 @@ Next.js 15, Tailwind v4, Supabase, Stripe.
           ["/plan", "Activa el modo planificación (no ejecuta cambios)"],
           ["/compact", "Comprime el historial de conversación para liberar contexto"],
           ["/clear", "Limpia toda la conversación (nueva sesión)"],
-          ["/loop [tiempo]", "Ejecuta un skill cada X minutos automáticamente"],
           ["/cost", "Muestra cuántos tokens has usado en la sesión"],
           ["/memory", "Accede y modifica la memoria del agente"],
         ],
@@ -552,17 +555,16 @@ Cuando el usuario pida crear una propuesta, presupuesto o cotización comercial.
       },
       {
         type: "p",
-        text: "En claude.com/skills encontrarás miles de Skills creados por la comunidad. Puedes instalar un Skill de un solo comando — Claude descarga el repositorio de GitHub y lo configura automáticamente en tu proyecto.",
+        text: "El marketplace de Skills de Anthropic se accede a través del propio CLI de Claude Code. Puedes instalar un Skill de un solo comando y se configura automáticamente.",
       },
       {
         type: "code",
         lang: "bash",
-        text: `# En Claude Code, di simplemente:
-"Instala el skill de N8N desde este repositorio de GitHub: 
-[URL del repositorio]"
+        text: `# Desde el terminal o dentro de Claude Code:
+/plugin marketplace add anthropics/skills
 
-# Claude Code lo descarga, analiza y configura 
-# automáticamente en tu carpeta .claude/skills/`,
+# Claude Code lo descarga y configura automáticamente.
+# También puedes buscar en repositorios de terceros.`,
       },
       {
         type: "h2",
@@ -585,7 +587,7 @@ Cuando el usuario pida crear una propuesta, presupuesto o cotización comercial.
         headers: ["Herramienta", "Lo que Claude puede hacer via MCP"],
         rows: [
           ["Google Calendar", "Leer, crear y modificar eventos. Detectar conflictos de agenda."],
-          ["Gmail", "Leer, redactar Y ENVIAR emails (a diferencia del conector de Chat)"],
+          ["Gmail", "Leer, redactar Y ENVIAR emails con tu confirmación previa"],
           ["Notion", "CRUD completo: leer, crear, editar y eliminar páginas y bases de datos"],
           ["GitHub", "Crear repos, commits, PRs, issues, leer código"],
           ["Vercel", "Crear proyectos, hacer deploy, ver logs, gestionar dominios"],
@@ -649,19 +651,25 @@ Cuando el usuario pida crear una propuesta, presupuesto o cotización comercial.
       },
       {
         type: "table",
-        headers: ["Característica", "Free", "Pro ($20/mes)", "Max ($100-200/mes)"],
+        headers: ["Característica", "Free", "Pro ($20/mes)", "Team ($25/usu)", "Max (desde $100)"],
         rows: [
-          ["Claude Chat", "✅ Limitado", "✅ 5× más uso", "✅ 20× más uso"],
-          ["Claude Code", "❌", "✅ Incluido", "✅ Incluido"],
-          ["Claude Cowork", "❌ Básico", "✅ Completo", "✅ Completo"],
-          ["Modelos disponibles", "Sonnet básico", "Todos (Haiku, Sonnet, Opus)", "Todos + prioridad"],
-          ["Skills & MCP", "❌", "✅", "✅"],
-          ["Tareas programadas", "❌", "✅", "✅"],
-          ["Límite por sesión", "Bajo", "Normal (5h reset)", "Alto (5h reset)"],
-          ["Límite semanal", "Bajo", "Normal", "20× mayor"],
-          ["Prioridad horas pico", "❌", "❌", "✅"],
-          ["Ideal para", "Probar Claude", "Uso diario individual", "Equipos y power users"],
+          ["Claude Chat", "✅ Limitado", "✅ Base", "✅ Mayor límite", "✅ Hasta 20x más"],
+          ["Claude Code", "❌", "✅ Incluido", "✅ Incluido", "✅ Incluido"],
+          ["Claude Cowork", "❌ Básico", "✅ Completo", "✅ Completo", "✅ Completo"],
+          ["Modelos", "Sonnet 4.6", "Todos", "Todos", "Todos + prioridad"],
+          ["Skills & MCP", "❌", "✅", "✅", "✅"],
+          ["Tareas programadas", "❌", "✅", "✅", "✅"],
+          ["Límites de uso", "Bajo", "Dinámico", "Dinámico alto", "Dinámico inmenso"],
+          ["Límite semanal", "Bajo", "Dinámico", "Dinámico alto", "20× mayor"],
+          ["Prioridad horas pico", "❌", "❌", "❌", "✅"],
+          ["Ideal para", "Probar", "Individuos", "Equipos", "Power users"],
         ],
+      },
+      {
+        type: "callout",
+        variant: "info",
+        title: "Extra Usage y Límites dinámicos",
+        text: "En los planes de pago, los límites son dinámicos según tu actividad y el tipo de tareas. Además, si agotas tu límite, puedes habilitar 'Extra Usage' para continuar mediante pago por consumo adicional sin bloqueos.",
       },
       {
         type: "callout",
@@ -677,7 +685,7 @@ Cuando el usuario pida crear una propuesta, presupuesto o cotización comercial.
         type: "analogy",
         emoji: "🚿",
         title: "Tokens como agua caliente",
-        text: "Los límites de Claude funcionan como el agua caliente en casa: tienes una cantidad por sesión (como el depósito de agua caliente). Si se agota, esperas 5 horas a que se recarge. Además hay un límite semanal total — como la factura del agua. Max te da un depósito mucho más grande.",
+        text: "Los límites de Claude funcionan como el agua caliente en casa: tienes una capacidad dinámica. Si hay mucha demanda, baja un poco. Si se agota en sesiones intensivas, esperas a que se recargue (usualmente unas horas). Además hay un límite total en el periodo. Max te da un depósito inmenso.",
       },
       {
         type: "h2",
@@ -761,8 +769,8 @@ Cuando el usuario pida crear una propuesta, presupuesto o cotización comercial.
       {
         type: "list",
         items: [
-          "Campañas de Meta Ads: Claude Code conectado a Meta Ads Manager via MCP. Crea, optimiza y pausa campañas en lenguaje natural",
-          "Thumbnails de YouTube: Skill especializado + API de modelos de imagen (Imagen, DALL-E)",
+          "Campañas de Meta Ads: Automatiza campañas conectando Claude con n8n o herramientas de automatización via MCP.",
+          "Thumbnails de YouTube: Claude genera el concepto visual y lo produce usando las herramientas de imagen integradas de Claude Chat.",
           "Calendar editorial de 3 meses generado en 10 minutos a partir de tu nicho y audiencia",
           "Repropósito de contenido: un blog → 10 posts de LinkedIn → 5 tweets → 1 newsletter",
           "SEO: análisis de keywords, meta descriptions y títulos optimizados en batch",
@@ -802,7 +810,7 @@ Cuando el usuario pida crear una propuesta, presupuesto o cotización comercial.
         type: "callout",
         variant: "info",
         title: "¡Guía completada! 🎉",
-        text: "Has completado todos los módulos de Claude para Dummies. Ahora tienes el conocimiento para aprovechar al máximo el ecosistema Anthropic. ¿El siguiente paso? Abre Claude y practica lo que has aprendido.",
+        text: "Has completado todos los módulos de Claude para Dummies. Ahora tienes el conocimiento para aprovechar al máximo el ecosistema Anthropic. ¿El siguiente paso? Abre Claude y practica lo que has aprendido. Para mayor profundidad técnica, visita siempre la [documentación oficial de Anthropic](https://docs.anthropic.com).",
       },
     ],
   },

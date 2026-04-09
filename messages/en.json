@@ -10,7 +10,7 @@
     "lang": "ES"
   },
   "hero": {
-    "badge": "The world's most powerful AI",
+    "badge": "One of the world's most advanced AIs",
     "headline1": "The AI that's changing everything,",
     "headline2": "explained for normal humans.",
     "sub": "A practical, no-nonsense guide to Claude, Claude Code and Cowork. Zero code. Zero frustration. Only results.",
@@ -172,7 +172,7 @@
         "period": "/month",
         "desc": "To explore and get started",
         "features": [
-          "Limited Claude Sonnet",
+          "Claude Sonnet 4.6 (limited usage)",
           "Claude Chat on web",
           "No Claude Code",
           "No advanced Cowork"
@@ -196,12 +196,27 @@
         "highlighted": true
       },
       {
-        "name": "Max",
-        "price": "$100",
-        "period": "/month",
-        "desc": "For power users and teams",
+        "name": "Team",
+        "price": "from $25",
+        "period": "/user/month",
+        "desc": "For teams (minimum 5 users)",
         "features": [
-          "20× more usage than Pro",
+          "Everything in Pro",
+          "Higher usage limits",
+          "Centralized billing",
+          "Admin controls",
+          "Share chats & projects"
+        ],
+        "cta": "Choose Team",
+        "highlighted": false
+      },
+      {
+        "name": "Max",
+        "price": "from $100",
+        "period": "/month",
+        "desc": "For power users (5x & 20x plans)",
+        "features": [
+          "Up to 20× more usage than Pro",
           "Priority during peak hours",
           "Ideal for multi-agent tasks",
           "Early access to new features",
@@ -218,7 +233,7 @@
     "links": [
       { "label": "Claude official", "href": "https://claude.ai" },
       { "label": "Anthropic", "href": "https://anthropic.com" },
-      { "label": "Claude Code docs", "href": "https://docs.claude.ai/code" }
+      { "label": "Claude Code docs", "href": "https://docs.anthropic.com/en/docs/claude-code" }
     ]
   }
 }
