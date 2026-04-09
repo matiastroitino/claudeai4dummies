@@ -3,7 +3,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import CookieConsent from "@/components/CookieConsent";
 import "@fontsource-variable/bricolage-grotesque";
 import "@fontsource-variable/dm-sans";
 import "@fontsource/jetbrains-mono";
@@ -24,7 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t("title"),
     description: t("description"),
-    metadataBase: new URL("https://claude4dummies.com"),
+    metadataBase: new URL("https://guiaclaude.matiastroitino.com"),
+    verification: {
+      google: "RJgrV9NaTlrMjU2X5-UjKbuSsEyme2wAWdJUtvGnp8E",
+    },
     openGraph: {
       title: t("title"),
       description: t("description"),
@@ -47,7 +50,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
-        <GoogleAnalytics gaId="G-XXXXXXXXXX" />
+        <CookieConsent />
       </body>
     </html>
   );

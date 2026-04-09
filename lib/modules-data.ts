@@ -810,7 +810,7 @@ Cuando el usuario pida crear una propuesta, presupuesto o cotización comercial.
         type: "callout",
         variant: "info",
         title: "¡Guía completada! 🎉",
-        text: "Has completado todos los módulos de Claude para Dummies. Ahora tienes el conocimiento para aprovechar al máximo el ecosistema Anthropic. ¿El siguiente paso? Abre Claude y practica lo que has aprendido. Para mayor profundidad técnica, visita siempre la [documentación oficial de Anthropic](https://docs.anthropic.com).",
+        text: "Has completado todos los módulos de La Brújula de Claude. Ahora tienes el conocimiento para aprovechar al máximo el ecosistema Anthropic. ¿El siguiente paso? Abre Claude y practica lo que has aprendido. Para mayor profundidad técnica, visita siempre la [documentación oficial de Anthropic](https://docs.anthropic.com).",
       },
     ],
   },

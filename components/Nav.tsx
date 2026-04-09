@@ -68,7 +68,7 @@ export default function Nav() {
             className="font-display text-xl font-bold tracking-tight text-white hover:opacity-80 transition-opacity no-underline"
             id="nav-brand"
           >
-            Claude<span className="text-coral">4</span>Dummies
+            La Brújula de Claude
           </Link>
 
           {/* Desktop links */}

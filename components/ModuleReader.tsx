@@ -227,7 +227,7 @@ export default function ModuleReader({ module }: { module: ModuleData }) {
           <Link
             href={`/${locale}`}
             className="brand font-display font-bold text-lg text-white no-underline hover:opacity-80 transition-opacity"
-            dangerouslySetInnerHTML={{ __html: `Claude<span style="color:var(--coral)">4</span>Dummies` }}
+            dangerouslySetInnerHTML={{ __html: `La Brújula de Claude` }}
           />
         </div>
 
@@ -263,7 +263,7 @@ export default function ModuleReader({ module }: { module: ModuleData }) {
 
         {/* Bottom */}
         <div className="px-5 py-4 border-t border-[rgba(255,255,255,0.06)]">
-          <p className="text-xs text-white/20">Claude4Dummies · 2026</p>
+          <p className="text-xs text-white/20">La Brújula de Claude · 2026</p>
         </div>
       </aside>
 

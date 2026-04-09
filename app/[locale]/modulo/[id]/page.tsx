@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const mod = getModule(locale, id);
   if (!mod) return {};
   return {
-    title: `Módulo ${mod.number}: ${mod.title} — Claude4Dummies`,
+    title: `Módulo ${mod.number}: ${mod.title} — La Brújula de Claude`,
     description: mod.subtitle,
   };
 }

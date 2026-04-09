@@ -15,7 +15,7 @@ export default function FooterSection() {
         <div
           className="brand font-display text-2xl font-bold mb-4"
           dangerouslySetInnerHTML={{
-            __html: `Claude<span style="color:var(--coral)">4</span>Dummies`,
+            __html: `La Brújula de Claude`,
           }}
         />
         <p className="text-white/30 text-sm mb-2">{t("tagline")}</p>
