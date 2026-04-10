@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Logo from "./Logo";
 
 export default function Nav() {
   const t = useTranslations("nav");
@@ -65,10 +66,11 @@ export default function Nav() {
           {/* Brand */}
           <Link
             href={`/${locale}`}
-            className="font-display text-xl font-bold tracking-tight text-white hover:opacity-80 transition-opacity no-underline"
+            className="font-display text-xl font-bold tracking-tight text-white hover:opacity-80 transition-opacity no-underline flex items-center gap-2"
             id="nav-brand"
           >
-            La Brújula de Claude
+            <Logo className="w-8 h-8 rounded-full shadow-[0_0_15px_rgba(255,107,53,0.3)]" />
+            labrújuladeclaude
           </Link>
 
           {/* Desktop links */}
