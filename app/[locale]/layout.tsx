@@ -4,6 +4,7 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import CookieConsent from "@/components/CookieConsent";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import "@fontsource-variable/bricolage-grotesque";
 import "@fontsource-variable/dm-sans";
 import "@fontsource/jetbrains-mono";
@@ -47,6 +48,8 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className="scroll-smooth">
       <body className="font-sans antialiased bg-void text-white">
+        <GoogleTagManager gtmId="GTM-MS2JBQQR" />
+        <GoogleAnalytics gaId="G-8177RKB55W" />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
